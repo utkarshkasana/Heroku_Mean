@@ -20,7 +20,7 @@ angular
   ])
   .config(function ($routeProvider,$locationProvider,RestangularProvider) {
 
-      RestangularProvider.setBaseUrl('http://localhost:3000');
+      RestangularProvider.setBaseUrl('ds257838.mlab.com:57838/utkarshkasana1');
 
       $routeProvider
       .when('/', {
