@@ -36,9 +36,10 @@ angular
         redirectTo: '/'
       });
 
-      //$locationProvider.hashPrefix('');
+      $locationProvider.hashPrefix('');
 
-      $locationProvider.html5Mode(true);
+      //$locationProvider.html5Mode(true);
+      //$locationProvider.rewriteLinks(false);
 
 
   })
