@@ -20,7 +20,7 @@ angular
   ])
   .config(function ($routeProvider,$locationProvider,RestangularProvider) {
 
-      RestangularProvider.setBaseUrl('ds257838.mlab.com:57838/utkarshkasana1');
+      RestangularProvider.setBaseUrl('https://ds257838.mlab.com:57838/utkarshkasana1');
 
       $routeProvider
       .when('/', {
@@ -30,15 +30,15 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'Movies1Ctrl',
+        controller: 'Movies1Ctrl'
       })
       .otherwise({
         redirectTo: '/'
       });
 
-      $locationProvider.hashPrefix('');
+      //$locationProvider.hashPrefix('');
 
-     //$locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true);
 
 
   })
