@@ -54,7 +54,7 @@ gulp.task('scripts', function() {
 
 // Gulp task to minify images
 gulp.task('images', function () {
-    return gulp.src('./public/**/*.png')
+    return gulp.src(['./public/**/*.png','./public/**/*.ico'])
         .pipe(image())
         .pipe(gulp.dest('./dist'));
 });
@@ -113,7 +113,7 @@ gulp.task('watchCSS', function(){
 
 //Gulp watch for Image files
 gulp.task('watchImage', function(){
-    gulp.watch('./public/**/*.png',['images']);
+    gulp.watch(['./public/**/*.png','./public/**/*.ico'],['images']);
 });
 
 // Gulp task to minify all files
