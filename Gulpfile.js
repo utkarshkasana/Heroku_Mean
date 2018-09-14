@@ -81,8 +81,17 @@ gulp.task('lib', function() {
         './node_modules/angular-touch/angular-touch.js',
         './node_modules/jquery/dist/jquery.js',
         './node_modules/restangular/dist/restangular.js',
-        './node_modules/lodash/lodash.js'])
+        './node_modules/lodash/lodash.js',
+        './node_modules/bootstrap/dist/js/bootstrap.js'])
         .pipe(config.production ? uglify() : util.noop())
+        .pipe(gulp.dest('./dist/lib'));
+});
+
+// Gulp task to minify libCSS files
+gulp.task('libCSS', function() {
+
+    return gulp.src(['./node_modules/bootstrap/dist/css/bootstrap.css'])
+        .pipe(config.production ? csso() : util.noop())
         .pipe(gulp.dest('./dist/lib'));
 });
 
@@ -113,6 +122,7 @@ gulp.task('default',['clean','watchJS','watchHTML','watchCSS','watchImage'],func
         'styles',
         'scripts',
         'pages',
-        'lib'
+        'lib',
+        'libCSS'
     );
 });
