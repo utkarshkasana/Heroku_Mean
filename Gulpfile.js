@@ -54,10 +54,11 @@ gulp.task('scripts', function() {
 
 // Gulp task to minify images
 gulp.task('images', function () {
-    return gulp.src('./public/images/**/*.*')
+    return gulp.src('./public/**/*.png')
         .pipe(image())
-        .pipe(gulp.dest('./dist/images'));
+        .pipe(gulp.dest('./dist'));
 });
+
 
 // Gulp task to minify HTML files
 gulp.task('pages', function() {
@@ -112,7 +113,7 @@ gulp.task('watchCSS', function(){
 
 //Gulp watch for Image files
 gulp.task('watchImage', function(){
-    gulp.watch('./public/images/**/*.*',['images']);
+    gulp.watch('./public/**/*.png',['images']);
 });
 
 // Gulp task to minify all files
