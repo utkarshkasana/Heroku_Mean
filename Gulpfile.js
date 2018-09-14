@@ -54,8 +54,14 @@ gulp.task('scripts', function() {
 
 // Gulp task to minify images
 gulp.task('images', function () {
-    return gulp.src(['./public/**/*.png','./public/**/*.ico'])
+    return gulp.src(['./public/**/*.png'])
         .pipe(image())
+        .pipe(gulp.dest('./dist'));
+});
+
+// Gulp task to minifyICO images
+gulp.task('imageICO', function () {
+    return gulp.src(['./public/**/*.ico'])
         .pipe(gulp.dest('./dist'));
 });
 
@@ -113,13 +119,14 @@ gulp.task('watchCSS', function(){
 
 //Gulp watch for Image files
 gulp.task('watchImage', function(){
-    gulp.watch(['./public/**/*.png','./public/**/*.ico'],['images']);
+    gulp.watch(['./public/**/*.png'],['images']);
 });
 
 // Gulp task to minify all files
 gulp.task('default',['clean','watchJS','watchHTML','watchCSS','watchImage'],function () {
     runSequence(
         'images',
+        'imageICO',
         'styles',
         'scripts',
         'pages',
