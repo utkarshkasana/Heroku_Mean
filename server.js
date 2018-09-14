@@ -138,7 +138,7 @@ app.use(function (req, res, next) {
 /*app.use('*', function(req, res) {
     res.sendfile('./client/app/index.html')
 })*/
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/dist'));
 /*app.use('/js', express.static('./client/app/scripts'));
 app.use('/js', express.static('./client/app/scripts/controllers'));
 app.use('/css', express.static('./client/app/styles'));

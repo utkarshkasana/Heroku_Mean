@@ -1,0 +1,1 @@
+"use strict";angular.module("clientApp",["ngAnimate","ngCookies","ngResource","ngRoute","ngSanitize","ngTouch"]).config(["$routeProvider","$locationProvider",function(e,o){e.when("/",{templateUrl:"views/main.html",controller:"MainCtrl",controllerAs:"main"}).when("/about",{templateUrl:"views/about.html",controller:"Movies1Ctrl"}).otherwise({redirectTo:"/"}),o.hashPrefix("")}]);

@@ -8,11 +8,11 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MainCtrl', function ($scope, Movie) {
-      $scope.movies = Movie.getList().$object;
+  .controller('MainCtrl',['$scope'/*,'Movie'*/, function ($scope/*, Movie*/) {
+     /* $scope.movies = Movie.getList().$object;*/
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
-  });
+  }]);

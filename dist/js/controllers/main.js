@@ -1,0 +1,1 @@
+"use strict";angular.module("clientApp").controller("MainCtrl",["$scope",function(e){this.awesomeThings=["HTML5 Boilerplate","AngularJS","Karma"]}]);
