@@ -59,7 +59,13 @@ gulp.task('images', function () {
         .pipe(gulp.dest('./dist'));
 });
 
-// Gulp task to minifyICO images
+// Gulp task to minify pdf
+gulp.task('pdf', function () {
+    return gulp.src(['./public/**/*.pdf'])
+        .pipe(gulp.dest('./dist'));
+});
+
+// Gulp task to copy ICO images
 gulp.task('imageICO', function () {
     return gulp.src(['./public/**/*.ico'])
         .pipe(gulp.dest('./dist'));
@@ -131,6 +137,7 @@ gulp.task('default',['clean','watchJS','watchHTML','watchCSS','watchImage'],func
         'scripts',
         'pages',
         'lib',
-        'libCSS'
+        'libCSS',
+        'pdf'
     );
 });

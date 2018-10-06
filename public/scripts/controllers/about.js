@@ -8,7 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-    .controller('Movies1Ctrl',['$scope'/*,'Movie'*/, function ($scope/*, Movie*/) {
+    .controller('AboutCtrl',['$scope'/*,'Movie'*/, function ($scope/*, Movie*/) {
         /*$scope.movies = Movie.getList().$object;*/
     this.awesomeThings = [
       'HTML5 Boilerplate',

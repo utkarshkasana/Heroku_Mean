@@ -1,0 +1,1 @@
+"use strict";angular.module("clientApp").controller("SkillsCtrl",["$scope",function(l){l.skills={HTML:80,AngularJS:80,CSS:70,JavaScript:70,ReactJS:40,Java:60},l.getStyle=function(t){return"width:"+l.skills.get(t)+"%"}}]);

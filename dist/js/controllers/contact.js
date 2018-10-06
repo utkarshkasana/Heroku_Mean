@@ -1,0 +1,1 @@
+"use strict";angular.module("clientApp").controller("ContactCtrl",["$scope","$window",function(n,o){n.mailWithWindowOpen=function(){o.open("mailto:utkarsh.kasana@gmail.com?subject=Hello&body=Hi","_self")},n.openLinkedIn=function(){o.open("https://www.linkedin.com/in/utkarsh-kasana/")}}]);
