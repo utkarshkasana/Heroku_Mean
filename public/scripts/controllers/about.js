@@ -10,7 +10,7 @@
 angular.module('clientApp')
     .controller('AboutCtrl',['$scope','$http', function ($scope, $http) {
         $scope.list = function() {
-            var url = 'http://utkarshkasana.com/about';// URL where the Node.js server is running
+            var url = '/about';// URL where the Node.js server is running
             var data1 = JSON.stringify({
                 "name" : "utkarsh"
             });
