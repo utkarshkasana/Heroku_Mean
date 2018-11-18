@@ -39,7 +39,7 @@
     "restangular": "^1.6.1"
   },
   "devDependencies": {
-    "bootstrap": "^3.3.4",
+    "bootstrap": "^4.0.0",
     "del": "latest",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "latest",
