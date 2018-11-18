@@ -1,0 +1,1 @@
+"use strict";angular.module("clientApp").controller("AboutCtrl",["$scope","$http",function(t,n){t.list=function(){var i=JSON.stringify({name:"utkarsh"});n.post("/about",i).then(function(n){t.description=n.data})},t.list()}]);

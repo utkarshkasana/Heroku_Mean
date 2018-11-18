@@ -1,0 +1,16 @@
+<section>
+    <h1 class="skills-heading">Skills</h1>
+    <div class="each-skill" >
+        <div class="each-sub-skill" ng-repeat="(key,value) in skills">
+            <span>{{key}}</span>
+            <div class="progress">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{value}}"
+                     aria-valuemin="0" aria-valuemax="100" style="width:{{value}}%">
+                    <span class="sr-only">HTML</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</section>

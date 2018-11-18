@@ -8,12 +8,19 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-    .controller('Movies1Ctrl', function ($scope, Movie) {
-        $scope.movies = Movie.getList().$object;
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('AboutCtrl',['$scope','$http', function ($scope, $http) {
+        $scope.list = function() {
+            var url = '/about';// URL where the Node.js server is running
+            var data1 = JSON.stringify({
+                "name" : "utkarsh"
+            });
+            $http.post(url, data1).then(function(data) {
+                $scope.description = data.data;
+            });
+
+            // Accessing the Angular $http Service to get data via REST Communication from Node Server
+        };
+
+        $scope.list();
+  }]);
 

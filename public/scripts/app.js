@@ -16,11 +16,11 @@ angular
     'ngRoute',
     'ngSanitize',
     'ngTouch',
-    'restangular'
+    /*'restangular'*/
   ])
-  .config(function ($routeProvider,$locationProvider,RestangularProvider) {
+  .config(['$routeProvider','$locationProvider'/*,'RestangularProvider'*/, function ($routeProvider,$locationProvider/*,RestangularProvider*/) {
 
-      RestangularProvider.setBaseUrl('https://ds257838.mlab.com:57838/utkarshkasana1');
+      /*RestangularProvider.setBaseUrl('https://ds257838.mlab.com:57838/utkarshkasana1');*/
 
       $routeProvider
       .when('/', {
@@ -30,7 +30,15 @@ angular
       })
       .when('/about', {
         templateUrl: 'views/about.html',
-        controller: 'Movies1Ctrl'
+        controller: 'AboutCtrl'
+      })
+      .when('/skills', {
+          templateUrl: 'views/skills.html',
+          controller: 'SkillsCtrl'
+      })
+      .when('/contact', {
+          templateUrl: 'views/contact.html',
+          controller: 'ContactCtrl'
       })
       .otherwise({
         redirectTo: '/'
@@ -42,14 +50,15 @@ angular
       //$locationProvider.rewriteLinks(false);
 
 
-  })
-    .factory('MovieRestangular', function (Restangular) {
+  }]);
+    /*.factory('MovieRestangular',['Restangular', function (Restangular) {
         return Restangular.withConfig(function(RestangularConfigurer){
             RestangularConfigurer.setRestangularFields({
                 id: '_id'
             });
         });
-    })
-    .factory('Movie', function (MovieRestangular) {
+    }])
+    .factory('Movie',['MovieRestangular', function (MovieRestangular) {
         return MovieRestangular.service('movie');
-    });
+    }]);
+*/
